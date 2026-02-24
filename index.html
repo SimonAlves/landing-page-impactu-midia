@@ -8,18 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --bg: #020617; --primary: #38bdf8; --accent: #818cf8; }
+        :root { --bg: #020617; --primary: #38bdf8; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #ffffff; scroll-behavior: smooth; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 40px; }
         .text-glow { background: linear-gradient(135deg, #fff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
-        .btn-premium { background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); color: white; font-weight: 800; border-radius: 99px; padding: 18px 40px; transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1); box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2); text-decoration: none; display: inline-block; cursor: pointer; }
+        .btn-premium { background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); color: white; font-weight: 800; border-radius: 99px; padding: 18px 40px; transition: 0.5s; box-shadow: 0 10px 40px rgba(37, 99, 235, 0.2); text-decoration: none; display: inline-block; cursor: pointer; }
         .btn-premium:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 20px 50px rgba(37, 99, 235, 0.4); }
-        input[type="number"] { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 16px; border-radius: 20px; width: 100%; outline: none; font-size: 1.5rem; font-weight: 800; transition: 0.3s; }
+        input[type="number"] { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 16px; border-radius: 20px; outline: none; font-size: 1.5rem; font-weight: 800; text-align: center; }
         .bento-card { transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); border: 1px solid rgba(255, 255, 255, 0.03); }
         .bento-card:hover { transform: translateY(-15px); border-color: var(--primary); background: rgba(56, 189, 248, 0.02); }
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .highlight-box { border-left: 4px solid var(--primary); background: rgba(56, 189, 248, 0.05); padding: 24px; border-radius: 0 24px 24px 0; }
     </style>
 </head>
 <body class="antialiased">
@@ -29,49 +28,47 @@
         <div class="hidden lg:flex gap-12 text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500 italic">
             <a href="#roi" class="hover:text-sky-400 transition">Patrimônio Digital</a>
             <a href="#ferrari" class="hover:text-sky-400 transition">Modo Ferrari</a>
-            <a href="#bi" class="hover:text-sky-400 transition">Inteligência BI</a>
+            <a href="#phygital" class="hover:text-sky-400 transition">Teatro de Vendas</a>
             <a href="#tech" class="hover:text-sky-400 transition">Segurança</a>
         </div>
-        <a href="https://wa.me/5512974089040" class="btn-premium text-[11px] uppercase tracking-widest italic">Agendar Consultoria VIP</a>
+        <a href="https://wa.me/5512974089040" class="btn-premium text-[11px] uppercase tracking-widest italic">Consultoria VIP</a>
     </nav>
 
-    <section class="pt-72 pb-40 px-10 text-center relative">
-        <div class="reveal inline-block px-6 py-2 rounded-full glass border border-sky-500/30 text-[10px] font-bold text-sky-400 mb-10 tracking-[0.4em] uppercase italic">The Future of Retail Intelligence 2026</div>
-        <h1 class="reveal text-7xl md:text-[10rem] font-extrabold tracking-tighter mb-12 leading-[0.9]">Varejo de <br> <span class="text-glow italic font-light">Elite.</span></h1>
-        <p class="reveal max-w-4xl mx-auto text-gray-400 text-xl md:text-2xl font-light mb-16 italic leading-relaxed">Blindagem operacional e engenharia financeira para redes que buscam transformar o fluxo físico em um ativo digital milionário.</p>
-        <div class="reveal flex justify-center gap-8">
-            <a href="#roi" class="btn-premium px-16 py-6 text-xl italic">Simular ROI da Rede</a>
-        </div>
+    <section class="pt-72 pb-40 px-10 text-center reveal">
+        <div class="inline-block px-6 py-2 rounded-full glass border border-sky-500/30 text-[10px] font-bold text-sky-400 mb-10 tracking-[0.4em] uppercase italic">Retail Intelligence 2026</div>
+        <h1 class="text-7xl md:text-[9rem] font-extrabold tracking-tighter mb-12 leading-[0.9]">Varejo de <br> <span class="text-glow italic font-light">Elite.</span></h1>
+        <p class="max-w-4xl mx-auto text-gray-400 text-xl md:text-2xl font-light mb-16 italic">Transformamos fluxo físico em ativos digitais milionários através de engenharia financeira e resiliência cloud.</p>
+        <a href="#roi" class="btn-premium px-16 py-6 text-xl italic">Simular ROI da Rede</a>
     </section>
 
     <section id="roi" class="py-40 container mx-auto px-6 max-w-7xl reveal">
-        <div class="glass p-20 border-sky-500/10 grid lg:grid-cols-2 gap-24 items-center relative overflow-hidden">
-            <div class="text-left space-y-10 z-10">
-                <h2 class="text-5xl font-black italic uppercase text-sky-400 tracking-tighter italic">Viabilidade Financeira & Patrimônio</h2>
+        <div class="glass p-10 md:p-20 border-sky-500/10 flex flex-col lg:flex-row gap-24 items-center justify-between">
+            <div class="w-full lg:w-1/2 text-left space-y-10">
+                <h2 class="text-5xl font-black italic uppercase text-sky-400 tracking-tighter italic">Engenharia Financeira</h2>
                 <p class="text-gray-400 italic text-xl leading-relaxed italic">
-                    O mercado de mídia paga exige um investimento médio de R$ 3,00 por lead qualificado. Nossa engenharia recupera esse valor diretamente do seu fluxo físico, injetando patrimônio digital orgânico na sua rede.
+                    O mercado cobra <b>R$ 3,00 por lead qualificado</b>. Ao recuperar o fluxo desperdiçado no PDV, injetamos <b>R$ 360.000,00</b> de patrimônio digital orgânico na sua rede anualmente sem gastos com anúncios.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div class="space-y-4">
-                        <label class="text-[11px] font-bold text-gray-500 uppercase tracking-[0.3em] italic">Escala da Rede (Lojas)</label>
-                        <input type="number" id="lojas" value="5" oninput="calcROI()">
+                        <label class="text-[10px] font-bold text-gray-500 uppercase italic">Unidades na Rede</label>
+                        <input type="number" id="lojas" value="5" oninput="calcROI()" class="w-full">
                     </div>
                     <div class="space-y-4">
-                        <label class="text-[11px] font-bold text-gray-500 uppercase tracking-[0.3em] italic">Captura Mensal/Loja</label>
-                        <input type="number" id="leads" value="2000" oninput="calcROI()">
+                        <label class="text-[10px] font-bold text-gray-500 uppercase italic">Leads Mensais/Loja</label>
+                        <input type="number" id="leads" value="2000" oninput="calcROI()" class="w-full">
                     </div>
                 </div>
             </div>
-            <div class="relative p-16 bg-sky-500/5 rounded-[60px] border border-sky-500/20 text-center">
-                <p class="text-[11px] font-black uppercase tracking-[0.5em] text-sky-500 mb-8 italic">Patrimônio Gerado (12 Meses)</p>
-                <div class="text-8xl md:text-[9rem] font-black italic tracking-tighter text-white" id="totalROI">R$ 360.000</div>
-                <div class="mt-12 pt-12 border-t border-white/5 grid grid-cols-2 gap-8 text-left">
+            <div class="w-full lg:w-2/5 p-16 bg-sky-500/5 rounded-[50px] border border-sky-500/20 text-center shadow-2xl">
+                <p class="text-[10px] font-black uppercase tracking-[0.4em] text-sky-500 mb-8 italic">Ativo Gerado (12 Meses)</p>
+                <div class="text-6xl md:text-7xl lg:text-[8rem] font-black italic tracking-tighter text-white break-words" id="totalROI">R$ 360.000</div>
+                <div class="mt-12 pt-12 border-t border-white/5 grid grid-cols-2 gap-8 text-left italic">
                     <div>
-                        <span class="block text-[9px] font-black text-sky-500 uppercase italic">Eficiência de Base</span>
-                        <span class="text-xl font-bold text-white italic" id="baseAnual">120.000 Leads</span>
+                        <span class="block text-[9px] font-black text-sky-500 uppercase italic">Base de Leads</span>
+                        <span class="text-xl font-bold text-white" id="baseAnual">120.000</span>
                     </div>
                     <div>
-                        <span class="block text-[9px] font-black text-sky-500 uppercase italic">Payback Estimado</span>
+                        <span class="block text-[9px] font-black text-sky-500 uppercase italic">Payback</span>
                         <span class="text-xl font-bold text-white italic">< 45 Dias</span>
                     </div>
                 </div>
@@ -79,59 +76,61 @@
         </div>
     </section>
 
-    <section id="ferrari" class="py-40 container mx-auto px-10 text-center reveal">
-        <h2 class="text-5xl font-black italic mb-24 uppercase text-sky-400 italic">Engenharia "Modo Ferrari"</h2>
+    <section id="ferrari" class="py-40 container mx-auto px-10 reveal">
+        <h2 class="text-5xl font-black italic mb-24 text-center uppercase text-sky-400 italic">Engenharia Modo Ferrari</h2>
         <div class="grid md:grid-cols-2 gap-12 text-left italic">
-            <div class="glass p-12 bento-card">
-                <h4 class="text-3xl font-bold mb-8 italic"><i class="fas fa-car-side text-sky-500 mr-6"></i>Sorteio por Posicionamento</h4>
+            <div class="glass p-12 bento-card border-l-4 border-sky-500">
+                <h4 class="text-3xl font-bold mb-8 italic">Controle de Margem</h4>
                 <p class="text-lg text-gray-400 leading-relaxed italic">
-                    Esqueça a sorte. Defina a tentativa exata em que o prêmio sai (ex: 500º cliente). Isso permite o cálculo preciso da margem de lucro antes mesmo da campanha começar.
+                    Defina a tentativa exata da premiação. O prêmio só sai com faturamento de cobertura em caixa, garantindo que o seu planejamento financeiro seja executado com precisão absoluta.
                 </p>
             </div>
             <div class="glass p-12 bento-card">
-                <h4 class="text-3xl font-bold mb-8 italic"><i class="fas fa-shield-halved text-sky-500 mr-6"></i>Blindagem de Estoque</h4>
-                <p class="text-lg text-gray-400 leading-relaxed italic">
-                    O prêmio só é liberado quando o faturamento de cobertura já estiver no caixa. Garantia de previsibilidade de lucro e proteção absoluta de margem operacional.
-                </p>
+                <h4 class="text-3xl font-bold mb-8 italic">Diferencial Enterprise</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-4"></i> Infraestrutura Cloud MongoDB Atlas</div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-4"></i> Gestão de Mídia Cloudinary 4K</div>
+                    <div class="flex items-center"><i class="fas fa-check-circle text-sky-400 mr-4"></i> Compliance Total LGPD & Auditoria</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="phygital" class="py-40 container mx-auto px-10 text-center reveal">
+        <h2 class="text-5xl font-black italic mb-20 uppercase text-sky-400 italic">Teatro de Vendas (Phygital)</h2>
+        <div class="relative inline-block mb-20 group">
+            <img src="TVIMPACTMIDIA.png" alt="Slide da TV Impactu" class="w-full shadow-2xl rounded-[40px] border border-white/5 max-w-6xl mx-auto transition-all duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[40px] flex items-end p-16">
+                <p class="text-xl font-bold italic text-sky-400">Suspense Sincronizado: O celular raspa, a TV reage.</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 text-left italic">
+            <div class="glass p-12">
+                <h4 class="text-2xl font-bold mb-6 italic">Blindagem de Spoiler</h4>
+                <p class="text-gray-400 text-sm italic">O sistema injeta o resultado com atraso milimétrico, impedindo fraudes visuais antes da conclusão da raspagem.</p>
+            </div>
+            <div class="glass p-12">
+                <h4 class="text-2xl font-bold mb-6 italic">Joint Business Plan</h4>
+                <p class="text-gray-400 text-sm italic">Sua TV como vitrine: fornecedores patrocinam o espaço, transformando a tecnologia em um gerador de lucro líquido.</p>
             </div>
         </div>
     </section>
 
     <section id="bi" class="py-40 container mx-auto px-10 text-center reveal">
         <h2 class="text-5xl font-black italic mb-24 uppercase text-sky-400 italic">Inteligência & Governança (BI)</h2>
-        <img src="admin.png" alt="Dashboard Impactu" class="w-full shadow-2xl rounded-[40px] border border-white/5 mb-20 max-w-6xl mx-auto">
+        <img src="admin.png" alt="Dashboard BI Impactu" class="w-full shadow-2xl rounded-[40px] mb-20 max-w-6xl mx-auto border border-white/5">
         <div class="grid md:grid-cols-3 gap-10 text-left italic">
             <div class="glass p-10 bento-card">
                 <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic">Horários de Pico</h5>
-                <p class="text-sm text-gray-500 leading-relaxed italic">Visualize as horas de maior conversão e otimize as escalas baseado no fluxo real capturado pelo sistema.</p>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Identifique turnos de alta conversão e otimize escalas baseado no fluxo real capturado.</p>
             </div>
             <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic italic">Ranking de Performance</h5>
-                <p class="text-sm text-gray-500 leading-relaxed italic italic">Identifique instantaneamente qual vendedor é o seu "braço direito" na captura de novos leads qualificados.</p>
+                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic">Ranking Vendedores</h5>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Monitore quem é o braço direito da empresa na conversão de novos leads qualificados.</p>
             </div>
             <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic italic italic">Validador Anti-Fraude</h5>
-                <p class="text-sm text-gray-500 leading-relaxed italic italic italic">Registro de entrega com código único gerado pelo sistema. Honestidade operacional com controle total de auditoria.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tech" class="py-40 bg-white/[0.01] border-y border-white/5 reveal">
-        <div class="container mx-auto px-10 text-center">
-            <h2 class="text-5xl font-black italic mb-24 uppercase text-sky-400 italic">Infraestrutura Resiliente</h2>
-            <div class="grid md:grid-cols-2 gap-16 text-left italic">
-                <div class="glass p-12 bento-card">
-                    <h4 class="font-bold mb-8 italic"><i class="fas fa-database text-sky-500 mr-6"></i>MongoDB Atlas Cloud</h4>
-                    <p class="text-lg text-gray-400 leading-relaxed italic">
-                        Infraestrutura idêntica à de gigantes como Forbes e Toyota. Dados armazenados em nuvem global redundante: se o hardware resetar, nenhuma informação é perdida.
-                    </p>
-                </div>
-                <div class="glass p-12 bento-card">
-                    <h4 class="font-bold mb-8 italic"><i class="fas fa-bolt text-sky-500 mr-6"></i>Cloudinary 4K Assets</h4>
-                    <p class="text-lg text-gray-400 leading-relaxed italic">
-                        Entrega de artes via CDN para carregamento instantâneo. O resultado é uma TV que nunca trava e imagens cinematográficas que elevam o padrão da sua marca.
-                    </p>
-                </div>
+                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic">Validador Anti-Fraude</h5>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Registro de entrega com código único vinculado ao caixa. Honestidade operacional absoluta.</p>
             </div>
         </div>
     </section>
@@ -147,10 +146,9 @@
             const leadsAnuais = l * f * 12;
             const total = leadsAnuais * 3;
             document.getElementById('totalROI').innerText = `R$ ${total.toLocaleString('pt-BR')}`;
-            document.getElementById('baseAnual').innerText = `${leadsAnuais.toLocaleString('pt-BR')} Leads`;
+            document.getElementById('baseAnual').innerText = `${leadsAnuais.toLocaleString('pt-BR')}`;
         }
         calcROI();
-
         window.addEventListener('scroll', () => {
             const reveals = document.querySelectorAll('.reveal');
             reveals.forEach(reveal => {
