@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impactu Mídia | Next-Gen Enterprise Intelligence</title>
+    <title>Impactu Mídia | Next-Gen Enterprise Retail Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,136 +11,128 @@
         :root { --bg: #020617; --primary: #38bdf8; --accent: #818cf8; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #ffffff; scroll-behavior: smooth; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .text-glow { background: linear-gradient(135deg, #fff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .bento-card { transition: all 0.4s ease; border-radius: 32px; overflow: hidden; }
+        .text-glow { background: linear-gradient(135deg, #fff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
+        .bento-card { transition: all 0.4s ease; border-radius: 32px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05); }
         .bento-card:hover { transform: translateY(-5px); border-color: var(--primary); background: rgba(56, 189, 248, 0.03); }
-        .btn-premium { background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); color: white; font-weight: 800; border-radius: 99px; transition: 0.4s; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3); text-decoration: none; display: inline-block; cursor: pointer; }
-        .btn-premium:hover { transform: scale(1.05); filter: brightness(1.2); }
+        .btn-premium { background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); color: white; font-weight: 800; border-radius: 99px; padding: 16px 36px; transition: 0.4s; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3); text-decoration: none; display: inline-block; cursor: pointer; }
         input[type="number"] { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 12px; width: 100%; outline: none; font-size: 1.25rem; font-weight: 800; }
-        .dashboard-mockup { border-radius: 24px; box-shadow: 0 0 50px rgba(56, 189, 248, 0.15); border: 1px solid rgba(255, 255, 255, 0.1); width: 100%; max-width: 900px; margin: 0 auto; }
+        .highlight-box { border-left: 4px solid var(--primary); background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 0 20px 20px 0; }
+        .dashboard-img { border-radius: 24px; box-shadow: 0 0 50px rgba(56, 189, 248, 0.15); width: 100%; max-width: 900px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center glass border-b border-white/5">
-        <div class="text-2xl font-black tracking-tighter italic italic">IMPACTU<span class="text-sky-400">MÍDIA</span></div>
-        <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 italic">
-            <a href="#roi" class="text-sky-400 hover:text-white transition">Simulador ROI</a>
-            <a href="#bi" class="hover:text-sky-400 transition">Inteligência BI</a>
-            <a href="#monetizacao" class="hover:text-sky-400 transition">Monetização</a>
-            <a href="#tech" class="hover:text-sky-400 transition">Tecnologia</a>
+        <div class="text-2xl font-black tracking-tighter italic">IMPACTU<span class="text-sky-400">MÍDIA</span></div>
+        <div class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 italic">
+            <a href="#roi" class="text-sky-400 hover:text-white transition">ROI</a>
+            <a href="#beneficios" class="hover:text-white transition">Benefícios</a>
+            <a href="#bi" class="hover:text-white transition">Inteligência</a>
+            <a href="#tech" class="hover:text-white transition">Tecnologia</a>
         </div>
-        <a href="https://wa.me/5512974089040" class="btn-premium px-8 py-3 text-[10px] uppercase italic">Acessar Consultoria VIP</a>
+        <a href="https://wa.me/5512974089040?text=Olá Simon, vi a estrutura Enterprise e gostaria de agendar uma consultoria." class="btn-premium px-8 py-3 text-[10px] uppercase italic">Acessar Consultoria VIP</a>
     </nav>
 
-    <section class="pt-64 pb-32 px-10 text-center">
-        <div class="inline-block px-4 py-1 rounded-full glass border border-sky-500/30 text-[9px] font-bold text-sky-400 mb-8 tracking-[0.3em] uppercase italic italic">Arquitetura Retail Intelligence 2026</div>
+    <section class="pt-64 pb-32 px-10 text-center relative">
+        <div class="inline-block px-4 py-1 rounded-full glass border border-sky-500/30 text-[9px] font-bold text-sky-400 mb-8 tracking-[0.3em] uppercase italic">Retail Engineering 2026</div>
         <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-10 leading-tight">Engenharia de <br> <span class="text-glow italic font-light">Lucro Escalável.</span></h1>
         <p class="max-w-3xl mx-auto text-gray-400 text-lg md:text-xl font-light mb-12 italic">Blindagem de margem, captura inteligente de dados e monetização de indústria para grandes redes de varejo.</p>
         <div class="flex justify-center gap-6">
-            <a href="#roi" class="btn-premium px-12 py-5 text-lg italic italic">Simular ROI da Rede</a>
-            <a href="#bi" class="border border-white/10 px-12 py-5 rounded-full text-lg font-bold hover:bg-white/5 transition italic">Conhecer Painel BI</a>
+            <a href="#roi" class="btn-premium px-12 py-5 text-lg italic">Simular ROI da Rede</a>
         </div>
     </section>
 
     <section id="roi" class="py-24 container mx-auto px-6 max-w-6xl">
-        <div class="glass p-12 rounded-[48px] border-sky-500/10 grid md:grid-cols-2 gap-16 items-center">
+        <div class="glass p-12 rounded-[48px] border-sky-500/10 grid md:grid-cols-2 gap-16 items-center mb-16">
             <div class="text-left space-y-6">
-                <h2 class="text-4xl font-black italic uppercase italic">A Matemática <br><span class="text-sky-400">do Patrimônio Digital.</span></h2>
-                <p class="text-gray-400 italic">No tráfego pago, cada lead qualificado custa em média <b>R$ 3,00</b>. Para construir uma base de 120 mil contatos, o investimento seria de R$ 360.000,00. Na Impactu, você gera esse valor de forma orgânica usando o fluxo que já está no seu PDV.</p>
+                <h2 class="text-4xl font-black italic uppercase text-sky-400">Patrimônio Digital</h2>
+                <p class="text-gray-400 italic text-sm">No mercado pago, cada lead qualificado custa em média <b>R$ 3,00</b>. Capturar 120 mil leads/ano via anúncios custaria R$ 360.000,00. Na Impactu, você gera esse valor de forma orgânica.</p>
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="text-[9px] font-bold text-gray-500 uppercase italic">Unidades na Rede</label>
-                        <input type="number" id="lojas" value="5" oninput="calc()" class="mt-2">
+                        <label class="text-[9px] font-bold text-gray-500 uppercase italic">Lojas</label>
+                        <input type="number" id="lojas" value="5" oninput="calcROI()">
                     </div>
                     <div>
-                        <label class="text-[9px] font-bold text-gray-500 uppercase italic">Fluxo Mensal/Loja</label>
-                        <input type="number" id="leads" value="2000" oninput="calc()" class="mt-2">
+                        <label class="text-[9px] font-bold text-gray-500 uppercase italic">Leads/Mês</label>
+                        <input type="number" id="leads" value="2000" oninput="calcROI()">
                     </div>
                 </div>
             </div>
             <div class="text-center p-10 bg-sky-500/5 rounded-3xl border border-sky-500/20">
-                <p class="text-[10px] font-black uppercase tracking-[0.4em] text-sky-400 mb-4 italic">Eficiência Operacional Gerada (Anual)</p>
-                <div class="text-7xl font-black italic tracking-tighter text-white" id="res">R$ 360.000</div>
-                <p class="text-gray-500 text-[10px] mt-6 italic italic italic">O sistema não é um custo, é uma devolução imediata de eficiência.</p>
+                <p class="text-[10px] font-black uppercase tracking-[0.4em] text-sky-400 mb-4 italic">Eficiência Anual Estimada</p>
+                <div class="text-7xl font-black italic tracking-tighter text-white" id="totalROI">R$ 360.000</div>
+                <p class="text-gray-500 text-[10px] mt-6 italic italic">O sistema se paga sozinho em menos de 45 dias.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 text-left italic">
+            <div class="highlight-box">
+                <h4 class="font-bold text-sky-400 mb-2 uppercase text-sm">Economia em Staff & Auditoria</h4>
+                <p class="text-xs text-gray-500">Substitui promotores e auditores manuais por inteligência nativa e automatizada.</p>
+            </div>
+            <div class="highlight-box">
+                <h4 class="font-bold text-sky-400 mb-2 uppercase text-sm">Aumento do LTV (Recorrência)</h4>
+                <p class="text-xs text-gray-500">Dados qualificados permitem réguas de relacionamento que fazem o cliente voltar sempre à loja.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-white/[0.01] border-y border-white/5">
+        <div class="container mx-auto px-10">
+            <h2 class="text-4xl font-black italic text-center mb-16 uppercase tracking-tighter text-sky-400">Resultados Estratégicos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left italic">
+                <div class="glass p-10 bento-card">
+                    <h4 class="font-bold text-white mb-4 italic"><i class="fas fa-chart-line text-sky-500 mr-3"></i> Vendas & Receita</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Aumento imediato do ticket médio, maior recorrência de recompra e redução de perdas em produtos com shelf life curto.</p>
+                </div>
+                <div class="glass p-10 bento-card">
+                    <h4 class="font-bold text-white mb-4 italic"><i class="fas fa-handshake text-sky-500 mr-3"></i> Monetização JB</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Aumento da arrecadação em áreas negociadas no <b>Joint Business Plan (JB)</b>, transformando a vitrine em lucro direto com fornecedores.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="bi" class="py-24 container mx-auto px-10 text-center">
-        <h2 class="text-4xl font-black italic mb-8 uppercase text-sky-400 italic">01. Inteligência & Governança (BI)</h2>
-        <p class="text-gray-400 mb-16 italic italic">Controle total da sua rede em um único painel estratégico.</p>
-        
-        <div class="mb-16">
-            <img src="https://i.ibb.co/C3mHhV5/dashboard-preview.png" alt="Dashboard Impactu Mídia" class="dashboard-mockup mb-12">
-            
-            <div class="grid md:grid-cols-3 gap-8 text-left italic">
-                <div class="glass p-8 rounded-3xl bento-card">
-                    <h5 class="font-bold text-sky-400 mb-2 italic">Análise de Horários de Pico</h5>
-                    <p class="text-xs text-gray-500 italic">Otimize as escalas baseado no fluxo real de interações capturadas.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl bento-card">
-                    <h5 class="font-bold text-sky-400 mb-2 italic italic">Ranking de Performance</h5>
-                    <p class="text-xs text-gray-500 italic italic">Monitore a eficiência de conversão por vendedor em tempo real.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl bento-card">
-                    <h5 class="font-bold text-sky-400 mb-2 italic italic italic">Compliance LGPD</h5>
-                    <p class="text-xs text-gray-500 italic italic italic">Gestão de dados criptografada com Opt-in explícito e segurança jurídica.</p>
-                </div>
+        <h2 class="text-4xl font-black italic mb-16 uppercase text-sky-400">01. Inteligência & Governança (BI)</h2>
+        <img src="https://i.ibb.co/C3mHhV5/dashboard-preview.png" alt="Painel BI Impactu Mídia" class="dashboard-img mb-16">
+        <div class="grid md:grid-cols-3 gap-8 text-left italic">
+            <div class="glass p-8 bento-card">
+                <h5 class="font-bold text-sky-400 mb-2 uppercase text-xs">Horários de Pico</h5>
+                <p class="text-xs text-gray-500">Otimize as escalas baseado no fluxo real de interações capturadas.</p>
             </div>
-        </div>
-        <a href="https://wa.me/5512974089040?text=Olá Simon, vi o preview do Dashboard e gostaria de uma demonstração guiada." class="btn-premium px-12 py-5 italic italic">Agendar Demonstração Guiada</a>
-    </section>
-
-    <section id="monetizacao" class="py-24 bg-sky-500/5 border-y border-white/5">
-        <div class="container mx-auto px-10 text-center">
-            <h2 class="text-4xl font-black italic mb-16 uppercase text-sky-400 italic">02. Monetização de Indústria (JB)</h2>
-            <div class="max-w-4xl mx-auto glass p-12 rounded-[48px] border-sky-500/20 text-left">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-6">
-                        <h4 class="text-2xl font-bold italic italic">Joint Business Plan (JB)</h4>
-                        <p class="text-sm text-gray-400 italic">Alugue a Vitrine Digital para seus fornecedores. Transforme a vitrine em um canal de mídia pago onde a indústria cobre os custos da sua tecnologia através de verbas de Trade Marketing.</p>
-                        <div class="flex gap-4">
-                            <span class="bg-sky-500/20 text-sky-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Custo Zero</span>
-                            <span class="bg-sky-500/20 text-sky-400 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Receita Nova</span>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-sky-500/10 rounded-3xl text-center">
-                        <p class="text-[10px] font-bold text-gray-500 uppercase mb-2">Potencial de Recuperação</p>
-                        <div class="text-6xl font-black text-white italic">100%</div>
-                        <p class="text-[9px] text-sky-500 font-bold mt-4 uppercase">Payback via parceiros</p>
-                    </div>
-                </div>
+            <div class="glass p-8 bento-card">
+                <h5 class="font-bold text-sky-400 mb-2 uppercase text-xs">Ranking Vendedores</h5>
+                <p class="text-xs text-gray-500">Identifique quais funcionários são motores de conversão em tempo real.</p>
+            </div>
+            <div class="glass p-8 bento-card">
+                <h5 class="font-bold text-sky-400 mb-2 uppercase text-xs">Validação Caixa</h5>
+                <p class="text-xs text-gray-500">Módulo exclusivo anti-fraude para baixa de prêmios e registro de entrega.</p>
             </div>
         </div>
     </section>
 
-    <section id="tech" class="py-24 container mx-auto px-10">
-        <h2 class="text-4xl font-black italic mb-16 text-center uppercase text-sky-400 italic">03. Engenharia Operacional</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="glass p-10 bento-card text-left">
-                <i class="fas fa-lock text-sky-500 text-3xl mb-6"></i>
-                <h4 class="font-bold mb-4 italic">Modo Ferrari</h4>
-                <p class="text-xs text-gray-500 italic">Controle matemático: você define exatamente quando o prêmio sai. Proteção de margem absoluta.</p>
-            </div>
-            <div class="glass p-10 bento-card text-left">
-                <i class="fas fa-bolt text-sky-500 text-3xl mb-6"></i>
-                <h4 class="font-bold mb-4 italic italic">Blindagem Anti-Reset</h4>
-                <p class="text-xs text-gray-500 italic">Imune a quedas de energia. Auto-restauração instantânea via MongoDB Atlas Cloud.</p>
-            </div>
-            <div class="glass p-10 bento-card text-left">
-                <i class="fas fa-tv text-sky-500 text-3xl mb-6"></i>
-                <h4 class="font-bold mb-4 italic italic italic">Phygital Senses</h4>
-                <p class="text-xs text-gray-500 italic italic">Sincronia entre mobile e TV. Suspense sonoro e visual para máxima retenção no PDV.</p>
+    <section id="tech" class="py-24 bg-white/[0.01] border-y border-white/5">
+        <div class="container mx-auto px-10">
+            <h2 class="text-4xl font-black italic mb-16 text-center uppercase text-sky-400">02. Engenharia de Blindagem</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left italic">
+                <div class="glass p-10 bento-card">
+                    <h4 class="font-bold text-white mb-4 italic"><i class="fas fa-car-side text-sky-400 mr-3"></i> Modo Ferrari</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Controle matemático absoluto: defina o momento exato da premiação e blinde sua margem de lucro contra erros humanos.</p>
+                </div>
+                <div class="glass p-10 bento-card border-sky-500/30">
+                    <h4 class="font-bold text-white mb-4 italic"><i class="fas fa-cloud text-sky-400 mr-3"></i> Infraestrutura Cloud</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Redundância global via <b>MongoDB Atlas</b> e <b>Cloudinary</b>. Imune a quedas de energia e resets; seus dados e mídias 4K estão sempre seguros.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="py-32 container mx-auto px-10">
-        <div class="glass p-16 rounded-[60px] text-center border-sky-500/30 relative">
-            <h2 class="text-5xl font-black italic mb-8 italic">Pronto para dominar?</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto mb-12 italic italic">Vagas limitadas para implantação. Apenas 3 redes atendidas simultaneamente para garantir o suporte de elite.</p>
-            <a href="https://wa.me/5512974089040" class="btn-premium px-16 py-6 text-xl italic italic">Solicitar Vaga de Implantação</a>
+        <div class="glass p-16 rounded-[60px] text-center border-sky-500/30">
+            <h2 class="text-5xl font-black italic mb-8">Vagas de Implantação Limitadas</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-12 italic">Aceitamos apenas 3 novas redes por mês para garantir o suporte VIP de elite. Reserve sua janela de 2026.</p>
+            <a href="https://wa.me/5512974089040" class="btn-premium px-16 py-6 text-xl italic">Garantir Minha Unidade</a>
         </div>
     </section>
 
@@ -149,13 +141,13 @@
     </footer>
 
     <script>
-        function calc() {
+        function calcROI() {
             const l = document.getElementById('lojas').value || 1;
             const f = document.getElementById('leads').value || 0;
             const total = l * f * 3 * 12;
-            document.getElementById('res').innerText = `R$ ${total.toLocaleString('pt-BR')}`;
+            document.getElementById('totalROI').innerText = `R$ ${total.toLocaleString('pt-BR')}`;
         }
-        calc();
+        calcROI();
     </script>
 </body>
 </html>
