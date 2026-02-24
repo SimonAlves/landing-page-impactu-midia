@@ -16,7 +16,7 @@
         .btn-premium:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 20px 50px rgba(37, 99, 235, 0.4); }
         
         /* Estilo Profissional Sliders */
-        input[type="range"] { -webkit-appearance: none; background: rgba(255,255,255,0.1); height: 8px; border-radius: 5px; outline: none; }
+        input[type="range"] { -webkit-appearance: none; background: rgba(255,255,255,0.1); height: 8px; border-radius: 5px; outline: none; width: 100%; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; background: var(--primary); border-radius: 50%; cursor: pointer; box-shadow: 0 0 15px var(--primary); }
 
         .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
@@ -57,7 +57,7 @@
                             <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest italic">Unidades da Rede</label>
                             <span class="text-sky-400 font-bold" id="valLojas">5 Lojas</span>
                         </div>
-                        <input type="range" id="lojas" min="1" max="50" value="5" oninput="calcROI()" class="w-full">
+                        <input type="range" id="lojas" min="0" max="50" value="5" oninput="calcROI()">
                     </div>
 
                     <div class="space-y-4">
@@ -65,7 +65,7 @@
                             <label class="text-[10px] font-bold text-gray-500 uppercase tracking-widest italic">Captura Mensal/Loja</label>
                             <span class="text-sky-400 font-bold" id="valLeads">2.000 Leads</span>
                         </div>
-                        <input type="range" id="leads" min="500" max="10000" step="100" value="2000" oninput="calcROI()" class="w-full">
+                        <input type="range" id="leads" min="0" max="10000" step="100" value="2000" oninput="calcROI()">
                     </div>
                 </div>
 
@@ -75,17 +75,21 @@
                 </div>
             </div>
 
-            <div class="w-full lg:w-2/5 relative p-16 bg-gradient-to-b from-sky-500/10 to-transparent rounded-[60px] border border-sky-500/20 text-center shadow-2xl">
+            <div class="w-full lg:w-1/2 relative p-12 bg-gradient-to-b from-sky-500/10 to-transparent rounded-[60px] border border-sky-500/20 text-center shadow-2xl min-h-[450px] flex flex-col justify-center">
                 <div class="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 glass border border-sky-500/30 rounded-full text-[10px] font-black uppercase tracking-widest text-sky-400 italic">Eficiência Anual Auditada</div>
-                <div class="text-6xl md:text-7xl lg:text-[8.5rem] font-black italic tracking-tighter text-white mb-4" id="totalROI">R$ 360.000</div>
-                <div class="mt-12 pt-12 border-t border-white/5 grid grid-cols-2 gap-8 text-left italic">
+                
+                <div class="flex flex-col items-center justify-center py-4">
+                    <span class="text-white font-black italic tracking-tighter leading-none" style="font-size: clamp(3rem, 10vw, 7.5rem);" id="totalROI">R$ 360.000</span>
+                </div>
+
+                <div class="mt-8 pt-8 border-t border-white/5 grid grid-cols-2 gap-8 text-left italic">
                     <div class="space-y-1">
                         <span class="block text-[9px] font-black text-sky-500 uppercase tracking-widest italic">Base Acumulada</span>
-                        <span class="text-2xl font-bold text-white" id="baseAnual">120.000 Leads</span>
+                        <span class="text-xl md:text-2xl font-bold text-white" id="baseAnual">120.000 Leads</span>
                     </div>
                     <div class="space-y-1">
                         <span class="block text-[9px] font-black text-sky-500 uppercase tracking-widest italic">Payback</span>
-                        <span class="text-2xl font-bold text-white italic">< 45 Dias</span>
+                        <span class="text-xl md:text-2xl font-bold text-white italic">< 45 Dias</span>
                     </div>
                 </div>
             </div>
@@ -137,11 +141,11 @@
         <img src="admin.png" alt="Dashboard BI" class="w-full shadow-2xl rounded-[40px] mb-20 max-w-6xl mx-auto border border-white/5">
         <div class="grid md:grid-cols-3 gap-10 text-left italic">
             <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic">Horários de Pico</h5>
+                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs">Horários de Pico</h5>
                 <p class="text-sm text-gray-500 leading-relaxed italic">Identifique turnos de alta conversão e otimize escalas baseado no fluxo real capturado.</p>
             </div>
             <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs italic">Ranking Vendedores</h5>
+                <h5 class="font-bold text-sky-400 mb-6 uppercase text-xs">Ranking Vendedores</h5>
                 <p class="text-sm text-gray-500 leading-relaxed italic">Monitore quem é o braço direito da empresa na conversão de novos leads qualificados.</p>
             </div>
             <div class="glass p-10 bento-card">
@@ -160,8 +164,7 @@
             const l = document.getElementById('lojas').value;
             const f = document.getElementById('leads').value;
             
-            // Atualiza labels
-            document.getElementById('valLojas').innerText = l + (l > 1 ? " Lojas" : " Loja");
+            document.getElementById('valLojas').innerText = l + (l == 1 ? " Loja" : " Lojas");
             document.getElementById('valLeads').innerText = parseInt(f).toLocaleString('pt-BR') + " Leads";
 
             const leadsAnuais = l * f * 12;
