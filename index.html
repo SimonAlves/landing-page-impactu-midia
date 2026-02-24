@@ -3,134 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impactu Mídia | ROI & Enterprise Intelligence</title>
+    <title>Impactu Mídia | Enterprise Retail Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --bg: #030712; --primary: #38bdf8; --secondary: #818cf8; }
+        :root { --bg: #020617; --primary: #38bdf8; --accent: #818cf8; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #ffffff; scroll-behavior: smooth; overflow-x: hidden; }
         
-        .mesh-gradient {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 10% 10%, rgba(129, 140, 248, 0.05) 0%, transparent 30%);
-            filter: blur(80px); animation: drift 20s infinite alternate;
-        }
-        @keyframes drift { from { transform: rotate(0deg) scale(1); } to { transform: rotate(5deg) scale(1.1); } }
-
-        .bento-card {
-            background: rgba(15, 23, 42, 0.3); backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 32px;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); position: relative; overflow: hidden;
-        }
-        .bento-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-
-        .text-glow { background: linear-gradient(135deg, #fff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; }
-        .btn-tech { background: #ffffff; color: #000; font-weight: 800; border-radius: 99px; padding: 16px 36px; transition: 0.3s; text-decoration: none; display: inline-block; cursor: pointer; }
-        .btn-tech:hover { background: var(--primary); transform: scale(1.05); color: #fff; box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-        input[type="number"] { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 12px; width: 100%; outline: none; }
+        /* Efeito de Vidro Profundo */
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.08); }
         
-        .highlight-box { border-left: 4px solid var(--primary); background: rgba(56, 189, 248, 0.05); padding: 20px; border-radius: 0 20px 20px 0; }
+        /* Animação de Fundo */
+        .glow-sphere {
+            position: fixed; width: 600px; height: 600px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+            z-index: -1; filter: blur(60px); animation: move 25s infinite alternate;
+        }
+        @keyframes move { from { transform: translate(-10%, -10%); } to { transform: translate(110%, 110%); } }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+            color: white; font-weight: 800; border-radius: 99px; transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+        .btn-gradient:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4); }
+
+        .card-reveal { animation: reveal 1s ease-out forwards; opacity: 0; }
+        @keyframes reveal { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     </style>
 </head>
-<body class="antialiased">
-    <div class="mesh-gradient"></div>
+<body>
+    <div class="glow-sphere"></div>
 
-    <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center backdrop-blur-xl border-b border-white/5">
-        <div class="text-xl font-black tracking-tighter italic">IMPACTU<span class="text-sky-400 underline underline-offset-4">MÍDIA</span></div>
-        <a href="https://wa.me/5512974089040" class="btn-tech text-[10px] uppercase tracking-widest">Consultoria 12 97408-9040</a>
+    <nav class="fixed w-full z-50 py-6 px-10 flex justify-between items-center glass border-b border-white/5">
+        <div class="text-2xl font-black tracking-tighter italic text-glow">IMPACTU<span class="text-sky-400">MÍDIA</span></div>
+        <div class="hidden lg:flex gap-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
+            <a href="#roi" class="hover:text-sky-400 transition">ROI</a>
+            <a href="#tech" class="hover:text-sky-400 transition">Tecnologia</a>
+            <a href="#plans" class="hover:text-sky-400 transition">Planos</a>
+        </div>
+        <a href="https://wa.me/5512974089040?text=Olá Simon, analisei o portal e quero agendar uma demonstração da Impactu Mídia." class="btn-gradient px-8 py-3 text-[10px] uppercase no-underline">Acessar Consultoria VIP</a>
     </nav>
 
-    <section class="pt-48 pb-12 px-10 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-glow italic">Simulador de ROI</h1>
-        <p class="max-w-2xl mx-auto text-gray-400 text-lg font-light italic">Calcule a eficiência operacional e o lucro invisível que sua rede está deixando na mesa.</p>
-    </section>
-
-    <section id="roi" class="py-12 container mx-auto px-6">
-        <div class="bento-card p-12 max-w-5xl mx-auto border-sky-500/20 bg-sky-500/5">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 italic">Número de Lojas na Rede:</label>
-                        <input type="number" id="inputLojas" value="1" oninput="calculateROI()">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-3 italic">Leads capturados por mês (por loja):</label>
-                        <input type="number" id="inputLeads" value="2000" oninput="calculateROI()">
-                    </div>
-                </div>
-                <div class="text-center">
-                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-sky-500 mb-4 italic">Economia & Lucratividade Anual</p>
-                    <div class="text-7xl font-black italic tracking-tighter text-white" id="displayROI">R$ 44.000</div>
-                    <p class="text-gray-500 text-xs mt-6 italic">Payback estimado: <span class="text-white">45 dias</span></p>
-                </div>
-            </div>
+    <section class="pt-64 pb-32 px-10 text-center relative">
+        <div class="inline-block px-4 py-1 rounded-full border border-sky-500/30 text-[10px] font-bold text-sky-400 mb-8 tracking-[0.2em] uppercase">Líder em Inteligência Phygital 2026</div>
+        <h1 class="text-6xl md:text-9xl font-extrabold tracking-tighter mb-10 leading-none">Varejo sem <br> <span class="italic font-light text-sky-400">Pontas Soltas.</span></h1>
+        <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-light mb-12 italic">
+            Transformamos seu fluxo físico em um ativo digital milionário. Blindagem de margem e captura de dados em escala.
+        </p>
+        <div class="flex justify-center gap-6">
+            <a href="#roi" class="btn-gradient px-12 py-5 text-lg">Simular Meu ROI</a>
         </div>
     </section>
 
-    <section class="py-24 container mx-auto px-10 max-w-5xl">
-        <div class="grid md:grid-cols-2 gap-16">
-            
-            <div class="space-y-12 text-left">
-                <div>
-                    <h3 class="text-sky-400 font-black text-xl mb-4 uppercase italic">1. O Custo da Oportunidade</h3>
-                    <p class="text-gray-400 leading-relaxed italic">Quanto custa hoje para sua rede capturar o WhatsApp de 2.000 clientes de forma qualificada? E quanto você gasta com auditoria para garantir que as promoções estão sendo executadas corretamente no PDV?</p>
-                </div>
+    <section class="py-10 border-y border-white/5 bg-white/[0.01]">
+        <div class="container mx-auto px-10 flex flex-wrap justify-center gap-12 opacity-30 grayscale">
+            <div class="flex items-center gap-2 font-bold"><i class="fab fa-aws text-2xl"></i> AWS</div>
+            <div class="flex items-center gap-2 font-bold"><i class="fas fa-database text-2xl"></i> MongoDB Atlas</div>
+            <div class="flex items-center gap-2 font-bold"><i class="fab fa-meta text-2xl"></i> Meta Business</div>
+            <div class="flex items-center gap-2 font-bold"><i class="fab fa-google text-2xl"></i> Google Cloud</div>
+        </div>
+    </section>
 
+    <section id="roi" class="py-32 container mx-auto px-6">
+        <div class="max-w-5xl mx-auto glass p-12 rounded-[40px] border-sky-500/20">
+            <div class="grid md:grid-cols-2 gap-20 items-center text-left">
                 <div>
-                    <h3 class="text-sky-400 font-black text-xl mb-4 uppercase italic">2. Os Pilares do Retorno</h3>
+                    <h2 class="text-4xl font-black italic mb-6">Quanto sua rede <br> <span class="text-sky-400">deixa na mesa?</span></h2>
+                    <p class="text-gray-500 text-sm mb-10 italic">Ajuste os parâmetros para calcular a economia em mídia paga e eficiência operacional.</p>
                     <div class="space-y-6">
-                        <div class="highlight-box">
-                            <h4 class="font-bold text-sm text-white mb-1">Economia em Staff & Auditoria</h4>
-                            <p class="text-xs text-gray-500 italic">Substitui promotores e auditores manuais. A inteligência é nativa e automatizada.</p>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase text-gray-400">Número de Lojas</label>
+                            <input type="number" id="lojas" value="5" oninput="upROI()" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl outline-none focus:border-sky-500 text-xl font-bold">
                         </div>
-                        <div class="highlight-box">
-                            <h4 class="font-bold text-sm text-white mb-1">Redução Drástica do CPL</h4>
-                            <p class="text-xs text-gray-500 italic">No tráfego pago, um lead custa até R$ 7,00. Na Impactu, custa centavos através do seu próprio fluxo.</p>
-                        </div>
-                        <div class="highlight-box">
-                            <h4 class="font-bold text-sm text-white mb-1">Aumento do LTV (Recorrência)</h4>
-                            <p class="text-xs text-gray-500 italic">Dados qualificados permitem réguas de relacionamento que fazem o cliente voltar sempre.</p>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase text-gray-400">Fluxo Mensal (Clientes/Loja)</label>
+                            <input type="number" id="leads" value="2000" oninput="upROI()" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl outline-none focus:border-sky-500 text-xl font-bold">
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="space-y-12 text-left">
-                <div class="bg-white/5 p-8 rounded-[32px] border border-white/10">
-                    <h3 class="text-white font-black text-xl mb-6 uppercase italic">3. Script de Viabilidade</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed italic mb-6">
-                        "Se sua rede tem 5 lojas e capturamos 2.000 leads/mês em cada uma, são <b>120.000 leads qualificados por ano.</b> No tráfego pago, você gastaria R$ 360 mil para ter esse mesmo volume. Na Impactu, você gera isso de forma orgânica. O sistema não é um custo, ele devolve eficiência operacional no primeiro ano."
-                    </p>
-                    <div class="text-sky-500 font-bold text-xs italic tracking-widest underline">O SISTEMA SE PAGA SOZINHO.</div>
-                </div>
-
-                <div class="bento-card p-8 border-sky-500/30">
-                    <h3 class="text-sky-400 font-black text-xl mb-4 uppercase italic italic italic">4. A Trava Ferrari</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed italic italic">
-                        "O ROI não é apenas o que você ganha, mas o que deixa de perder. Com a <b>Trava Ferrari</b>, blindamos sua margem. Um erro humano em sorteios comuns pode custar o lucro de um mês. Nossa tecnologia garante que o prêmio só saia quando o faturamento de cobertura estiver no caixa."
-                    </p>
+                <div class="text-center p-10 bg-sky-500/5 rounded-[32px] border border-sky-500/10">
+                    <p class="text-[10px] font-black uppercase tracking-[0.3em] text-sky-400 mb-4">Valor Patrimonial de Dados (Anual)</p>
+                    <div class="text-7xl font-black italic tracking-tighter" id="valROI">R$ 360.000</div>
+                    <div class="mt-8 p-4 bg-sky-500/10 rounded-xl text-xs text-sky-200 leading-relaxed italic">
+                        <strong>Insight:</strong> Este volume de leads custaria R$ 360 mil em anúncios. Na Impactu, o custo é zero.
+                    </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-gray-700 text-[10px] tracking-[0.6em] font-black uppercase italic italic">Impactu Mídia • Tecnologia by Simon Alves • 12 97408-9040</p>
+    <section id="tech" class="py-32 container mx-auto px-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-8 glass p-12 rounded-[32px] flex flex-col justify-end min-h-[400px]">
+                <h3 class="text-3xl font-black italic mb-4">Trava Ferrari & Anti-Reset</h3>
+                <p class="text-gray-400 italic">Engenharia de proteção de margem. Algoritmo que garante que o prêmio só saia com cobertura de faturamento. Imune a quedas de energia e falhas locais.</p>
+            </div>
+            <div class="md:col-span-4 glass p-10 rounded-[32px] bg-sky-500/5 flex flex-col justify-center items-center text-center">
+                <i class="fas fa-mobile-button text-5xl text-sky-400 mb-6"></i>
+                <h4 class="font-bold italic">Sincronia Phygital</h4>
+                <p class="text-xs text-gray-500 italic mt-4">O celular raspa, a TV comemora. A maior taxa de retenção do varejo moderno.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="py-32 container mx-auto px-10">
+        <div class="max-w-4xl mx-auto glass p-16 rounded-[48px] text-center border-sky-500/30 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-sky-500/20 blur-3xl rounded-full"></div>
+            <h2 class="text-5xl font-black italic mb-8">Pronto para liderar o mercado?</h2>
+            <p class="text-gray-400 mb-12 italic">Devido à complexidade da implantação e suporte VIP, aceitamos apenas <strong>3 novas redes</strong> por mês. Garanta sua janela de implementação para 2026.</p>
+            <a href="https://wa.me/5512974089040?text=Simon, vi que as vagas para implantação são limitadas. Quero garantir a minha rede." class="btn-gradient px-16 py-6 text-xl inline-block no-underline">Garantir Minha Unidade</a>
+            <p class="mt-8 text-[10px] text-gray-600 font-bold uppercase tracking-widest italic">Atenção: Atendimento exclusivo para donos de redes e franquias.</p>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center opacity-40">
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] italic">Impactu Mídia • Architecture by Simon Alves • Enterprise 2026</p>
     </footer>
 
     <script>
-        function calculateROI() {
-            const lojas = document.getElementById('inputLojas').value || 1;
-            const leads = document.getElementById('inputLeads').value || 0;
-            const economiaOperacional = lojas * 3000 * 12;
-            const ganhoLeads = leads * lojas * 0.5 * 12;
-            const totalAnual = economiaOperacional + ganhoLeads;
-            document.getElementById('displayROI').innerText = `R$ ${totalAnual.toLocaleString('pt-BR')}`;
+        function upROI() {
+            const l = document.getElementById('lojas').value || 0;
+            const d = document.getElementById('leads').value || 0;
+            // Cálculo: Leads * Lojas * R$ 3.00 (Valor médio CPL Ads) * 12 meses
+            const total = d * l * 3 * 12;
+            document.getElementById('valROI').innerText = `R$ ${total.toLocaleString('pt-BR')}`;
         }
-        calculateROI();
+        upROI();
     </script>
 </body>
 </html>
