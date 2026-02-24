@@ -47,14 +47,13 @@
         <div class="glass p-8 md:p-20 border-sky-500/10 flex flex-col lg:flex-row gap-20 items-center justify-between relative overflow-visible">
             <div class="w-full lg:w-1/2 text-left space-y-12">
                 <div class="flex items-center gap-4">
-                    <div class="inline-block px-4 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-[9px] font-bold text-sky-400 uppercase tracking-widest italic">Simulador de Auditoria v3.2</div>
+                    <div class="inline-block px-4 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-[9px] font-bold text-sky-400 uppercase tracking-widest italic italic">Simulador v3.2</div>
                     
                     <div class="group relative">
-                        <div class="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-gray-500 text-[10px] cursor-help hover:border-sky-400 hover:text-sky-400 transition">?</div>
-                        <div class="absolute left-0 lg:left-8 top-8 w-72 md:w-96 p-6 glass border-sky-500/30 opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-[100] text-[11px] leading-relaxed italic text-gray-300">
-                            <b class="text-sky-400 block mb-2 uppercase">Metodologia de Auditoria:</b>
-                            O valor é calculado com base no <b>CPL (Custo por Lead)</b> qualificado, auditado em <b>R$ 3,00</b>. No mercado de tráfego pago (Meta/Google Ads), este é o investimento necessário para adquirir um contato com o mesmo perfil de compra. <br><br>
-                            <b>A Lógica:</b> Ao capturar o cliente no PDV, você converte o tráfego físico "gratuito" em um ativo digital, economizando 100% da verba de anúncio que seria necessária para gerar a mesma base.
+                        <div class="w-6 h-6 rounded-full border border-gray-600 flex items-center justify-center text-gray-500 text-[10px] cursor-help hover:border-sky-400 transition">?</div>
+                        <div class="absolute left-0 lg:left-10 top-10 w-72 md:w-96 p-6 glass border-sky-500/30 opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-[100] text-[11px] leading-relaxed italic text-gray-300">
+                            <b class="text-sky-400 block mb-2 uppercase italic">Metodologia de Auditoria:</b>
+                            Cálculo baseado no <b>CPL (Custo por Lead)</b> auditado em <b>R$ 3,00</b>. Representa o investimento economizado em Ads para gerar a mesma base de leads qualificados que o sistema captura organicamente no PDV.
                         </div>
                     </div>
                 </div>
@@ -62,17 +61,17 @@
                 <h2 class="text-3xl md:text-5xl font-black italic uppercase text-white leading-tight">Patrimônio <br> <span class="text-sky-400">Digital Orgânico.</span></h2>
                 
                 <div class="space-y-10">
-                    <div class="space-y-4">
+                    <div class="space-y-4 italic">
                         <div class="flex justify-between items-center italic">
                             <label class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Unidades</label>
-                            <span class="text-sky-400 font-bold" id="valLojas">5 Lojas</span>
+                            <span class="text-sky-400 font-bold italic" id="valLojas">5 Lojas</span>
                         </div>
                         <input type="range" id="lojas" min="0" max="100" value="5" oninput="calcROI()">
                     </div>
                     <div class="space-y-4">
                         <div class="flex justify-between items-center italic">
                             <label class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">Captura Mensal/Loja</label>
-                            <span class="text-sky-400 font-bold" id="valLeads">2.000 Leads</span>
+                            <span class="text-sky-400 font-bold italic" id="valLeads">2.000 Leads</span>
                         </div>
                         <input type="range" id="leads" min="0" max="10000" step="1" value="2000" oninput="calcROI()">
                     </div>
@@ -81,59 +80,73 @@
 
             <div class="w-full lg:w-1/2 relative p-10 md:p-12 bg-gradient-to-b from-sky-500/10 to-transparent rounded-[40px] md:rounded-[60px] border border-sky-500/20 text-center shadow-2xl flex flex-col justify-center">
                 <div class="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 glass border border-sky-500/30 rounded-full text-[9px] font-black uppercase tracking-widest text-sky-400 italic">Eficiência Anual Auditada</div>
-                <div class="flex flex-col items-center justify-center py-4">
+                <div class="flex flex-col items-center justify-center py-4 italic">
                     <span class="text-white font-black italic tracking-tighter leading-none" style="font-size: clamp(2.5rem, 12vw, 7.5rem);" id="totalROI">R$ 360.000</span>
                 </div>
                 <div class="mt-8 pt-8 border-t border-white/5 grid grid-cols-2 gap-4 md:gap-8 text-left italic">
                     <div class="space-y-1">
-                        <span class="block text-[8px] font-black text-sky-500 uppercase tracking-widest">Base Acumulada</span>
-                        <span class="text-lg md:text-2xl font-bold text-white" id="baseAnual">120.000</span>
+                        <span class="block text-[8px] font-black text-sky-500 uppercase tracking-widest italic">Base Acumulada</span>
+                        <span class="text-lg md:text-2xl font-bold text-white italic" id="baseAnual">120.000</span>
                     </div>
                     <div class="space-y-1">
-                        <span class="block text-[8px] font-black text-sky-500 uppercase tracking-widest">Payback</span>
-                        <span class="text-lg md:text-2xl font-bold text-white">< 45 Dias</span>
+                        <span class="block text-[8px] font-black text-sky-500 uppercase tracking-widest italic">Payback</span>
+                        <span class="text-lg md:text-2xl font-bold text-white italic">< 45 Dias</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ferrari" class="py-24 md:py-40 container mx-auto px-6 reveal text-center">
+        <h2 class="text-4xl md:text-5xl font-black italic mb-20 uppercase text-sky-400 italic">Engenharia Modo Ferrari</h2>
+        <div class="grid md:grid-cols-2 gap-8 text-left italic">
+            <div class="glass p-10 bento-card border-l-4 border-sky-500 italic">
+                <h4 class="text-2xl font-bold mb-6 italic">Controle de Margem</h4>
+                <p class="text-gray-400 leading-relaxed italic">Definição matemática da tentativa de premiação. O prêmio só é liberado com faturamento de cobertura garantido em caixa.</p>
+            </div>
+            <div class="glass p-10 bento-card italic">
+                <h4 class="text-2xl font-bold mb-6 italic">Infraestrutura Tier 1</h4>
+                <p class="text-gray-400 italic">Resiliência global via <b>MongoDB Atlas</b> e performance 4K fluida via <b>Cloudinary</b>. Segurança total de dados conforme a LGPD.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="phygital" class="py-24 md:py-40 container mx-auto px-6 text-center reveal">
+        <h2 class="text-4xl md:text-5xl font-black italic mb-20 uppercase text-sky-400 italic">Teatro de Vendas</h2>
+        <img src="TVIMPACTMIDIA.png" alt="PDV Impactu" class="w-full shadow-2xl rounded-[30px] border border-white/5 max-w-6xl mx-auto mb-16">
+        <div class="grid md:grid-cols-2 gap-8 text-left italic">
+            <div class="glass p-10 bento-card italic">
+                <h4 class="text-xl font-bold mb-4 italic">Suspense Sincronizado</h4>
+                <p class="text-gray-400 text-sm italic">O celular raspa, a TV reage em tempo real. Experiência phygital imersiva que gera dopamina e fidelização no PDV.</p>
+            </div>
+            <div class="glass p-10 bento-card italic">
+                <h4 class="text-xl font-bold mb-4 italic">Joint Business Plan</h4>
+                <p class="text-gray-400 text-sm italic">Monetize seu espaço digital. Transforme a TV em um ativo de mídia patrocinado por seus fornecedores.</p>
             </div>
         </div>
     </section>
 
     <section id="bi" class="py-24 md:py-40 container mx-auto px-6 text-center reveal">
         <h2 class="text-4xl md:text-5xl font-black italic mb-20 uppercase text-sky-400 italic">Governança & Inteligência</h2>
-        <img src="admin.png" alt="Dashboard BI Impactu" class="w-full shadow-2xl rounded-[30px] md:rounded-[40px] border border-white/5 max-w-6xl mx-auto mb-20">
+        <img src="admin.png" alt="Dashboard BI" class="w-full shadow-2xl rounded-[30px] border border-white/5 max-w-6xl mx-auto mb-20">
         <div class="grid md:grid-cols-3 gap-8 text-left italic">
-            <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px]">Mapa de Calor PDV</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Monitore em tempo real os horários de maior engajamento e fluxo de captura da sua rede.</p>
+            <div class="glass p-10 bento-card italic">
+                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px] italic">BI em Tempo Real</h5>
+                <p class="text-gray-500 text-sm italic">Acompanhe horários de pico e o desempenho individual de captura de cada unidade da rede.</p>
             </div>
-            <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px]">Performance Individual</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Identifique os colaboradores de alta conversão através do ranking de leads capturados.</p>
+            <div class="glass p-10 bento-card italic">
+                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px] italic">Ranking de Leads</h5>
+                <p class="text-gray-500 text-sm italic">Identifique os melhores vendedores e otimize sua força de vendas baseada em dados reais.</p>
             </div>
-            <div class="glass p-10 bento-card">
-                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px]">Segurança Anti-Fraude</h5>
-                <p class="text-gray-500 text-sm leading-relaxed">Sistema de validação via caixa com código único, garantindo auditoria total de prêmios entregues.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="phygital" class="py-24 md:py-40 container mx-auto px-6 text-center reveal">
-        <h2 class="text-4xl md:text-5xl font-black italic mb-20 uppercase text-sky-400">Teatro de Vendas</h2>
-        <img src="TVIMPACTMIDIA.png" alt="Experiência Phygital" class="w-full shadow-2xl rounded-[30px] md:rounded-[40px] border border-white/5 max-w-6xl mx-auto mb-16">
-        <div class="grid md:grid-cols-2 gap-8 text-left italic">
-            <div id="tech" class="glass p-10 bento-card border-l-4 border-sky-500">
-                <h4 class="text-2xl font-bold mb-6 italic">Modo Ferrari</h4>
-                <p class="text-gray-400">Controle absoluto do estoque de prêmios com definição matemática da tentativa de vitória, protegendo a margem do varejista.</p>
-            </div>
-            <div class="glass p-10 bento-card">
-                <h4 class="text-2xl font-bold mb-6 italic">Joint Business Plan</h4>
-                <p class="text-gray-400">Transforme a TV em vitrine publicitária para fornecedores, gerando receita líquida imediata para a rede.</p>
+            <div class="glass p-10 bento-card italic">
+                <h5 class="font-bold text-sky-400 mb-4 uppercase text-[10px] italic">Auditoria Anti-Fraude</h5>
+                <p class="text-gray-500 text-sm italic">Validação via caixa com código único, garantindo que nenhum prêmio seja entregue sem registro.</p>
             </div>
         </div>
     </section>
 
     <footer class="py-16 text-center border-t border-white/5 opacity-30 italic">
-        <p class="text-[9px] font-black uppercase tracking-[0.6em]">Impactu Mídia • 2026</p>
+        <p class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.6em] italic">Impactu Mídia • 2026</p>
     </footer>
 
     <script>
